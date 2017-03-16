@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "Instagram Extension Plus",
+  "version": "1.0",
+
+  "description": "Permite extraer imagenes de instagram y ampliarlas",
+
+  "icons": {
+    "48": "icons/icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.instagram.com/*"],
+      "js": ["instextension.js"]
+    }
+  ]
+
+}
