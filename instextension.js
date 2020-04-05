@@ -1,21 +1,26 @@
-var divs = document.getElementsByClassName("_ovg3g");
-for(var i = 0; i < divs.length;i++)
-{
-	divs[i].parentNode.removeChild(divs[i]);
-}
-
 document.addEventListener('click', function(e) {
-	var divs = document.getElementsByClassName("_ovg3g");
-	for(var i = 0; i < divs.length;i++)
-	{
-   		divs[i].parentNode.removeChild(divs[i]);
+	//Si estoy en una story
+	if (window.location.pathname.includes("/stories/")) {
+		//Si hacen click en la foto	
+		if ((e.srcElement.outerHTML.includes('role=\"button\"') == false) && (e.srcElement.className != "coreSpriteRightChevron") && (e.srcElement.className != "coreSpriteLeftChevron")){ 
+			try{
+				var img = document.getElementsByTagName("video")[0].currentSrc; 
+			}
+			catch(error) { 
+				var img = document.getElementsByTagName("img")[1].src; //Si dió error es una foto
+			}
+		}
 	}
-
-    var target = e.target; 
-    var img = target.currentSrc;
-
-    if (img !=undefined){
-    	var win = window.open(img, '_blank');
-    	win.focus();  
-    }
+	//Es una foto de la bibliografia
+	else {
+		try {
+			var img = e.srcElement.parentElement.firstChild.firstChild.src;
+		}
+		catch(error) {
+		}
+	}
+	if (img !=undefined){
+		var win = window.open(img, '_blank');
+		win.focus();  
+	}
 }, false);
