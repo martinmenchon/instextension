@@ -1,15 +1,14 @@
-![Icon](icons/instagram_little.png)
-# Instagram Photo Plus
-[Link](https://addons.mozilla.org/es/firefox/addon/instagram-photo-plus/)
+# <img src="icons/instagram_little.png"  width="40"> Instagram Photo Plus
 
-**English**
-1. Go to Instagram. 
-2. Click picture. 
-3. Original picture quickly opens in a new tab for saving!
-4. Pictures and videos from stories
+[Add to your browser](https://addons.mozilla.org/es/firefox/addon/instagram-photo-plus/)
 
-**Español**
+**English**<br>
+1. Go to Instagram<br>
+2. Click picture<br>
+3. Original picture quickly opens in a new tab for saving!<br>
+4. Allows to download Pictures and videos from stories<br>
 
-Permite extraer imagenes de instagram y ampliarlas.
-Al hacer click sobre la imágen deseada, esta se abre en una nueva pestaña.
-Tambié funciona con imágenes y videos de stories.
+**Español**<br>
+Permite extraer imagenes de instagram y ampliarlas.<br>
+Al hacer click sobre la imágen deseada, esta se abre en una nueva pestaña.<br>
+Tambié funciona con imágenes y videos de stories.<br>
