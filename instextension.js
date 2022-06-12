@@ -2,7 +2,7 @@ document.addEventListener('click', function(e) {
 	//Si estoy en una story
 	if (window.location.pathname.includes("/stories/")) {
 		//Si hacen click en la foto	
-		if ((e.srcElement.outerHTML.includes('role=\"button\"') == false) && (e.srcElement.className != "coreSpriteRightChevron") && (e.srcElement.className != "coreSpriteLeftChevron")){ 
+		if (e.srcElement.closest("button") == null ) { 	
 			try{
 				var img = document.getElementsByTagName("video")[0].currentSrc; 
 			}
