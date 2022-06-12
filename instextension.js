@@ -24,3 +24,5 @@ document.addEventListener('click', function(e) {
 		win.focus();  
 	}
 }, false);
+
+//Special thanks to Jose G. Filippa
