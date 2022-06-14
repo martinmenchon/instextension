@@ -4,9 +4,9 @@
 
 **English**<br>
 1. Go to Instagram<br>
-2. Click picture<br>
-3. Original picture quickly opens in a new tab for saving!<br>
-4. Allows to download Pictures and videos from stories<br>
+2. Click on a picture<br>
+3. Original picture will open in a new tab for saving!<br>
+4. Allows downloading Pictures and videos from stories<br>
 
 **Español**<br>
 Permite extraer imagenes de instagram y ampliarlas.<br>
