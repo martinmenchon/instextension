@@ -1,0 +1,28 @@
+name: 'Firefox Addon Action'
+description: 'Upload your addon to Firefox'
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
+
+  steps:
+  - uses: trmcnvn/firefox-addon@v1
+    with:
+      # uuid is only necessary when updating an existing addon,
+      # omitting it will create a new addon
+      uuid: '{7b312f5e-9680-436b-acc1-9b09f60e8aaa}'
+      xpi: instextension.xpi #build/my-addon.xpi
+      manifest: src/manifest.json
+      api-key: ${{ secrets.FIREFOX_API_KEY }}
+      api-secret: ${{ secrets.FIREFOX_API_SECRET }}
