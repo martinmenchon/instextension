@@ -1,4 +1,7 @@
 #!/bin/bash
 
 find . -name '.DS_Store' -type f -delete
-zip -r instextension.xpi instextension
+cd instextension
+zip -r -D instextension.xpi .
+cd ..
+mv instextension/instextension.xpi .
