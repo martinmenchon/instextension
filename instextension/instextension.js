@@ -5,7 +5,7 @@ window.addEventListener('mousedown', (e) => {
 			//Si hacen click en la foto o video | If the photo or video is clicked
 			if ( (e.srcElement.closest("button") == null ) && (e.srcElement.parentElement.getAttribute('role') != "button") && (e.srcElement.parentElement.parentElement.getAttribute('role') != "button") ) { 
 				try {
-					var img = document.getElementsByTagName("video")[0].src; 
+					var img = document.getElementsByTagName("video")[0].src;
 				}
 				catch(error) { 
 					var img = e.srcElement.parentElement.parentElement.parentElement.firstChild.src; //Si dió error es una foto | If catching the video failed then it is a photo
@@ -29,6 +29,7 @@ window.addEventListener('mousedown', (e) => {
 				window.open(poster_feed, '_blank').focus();
 			}
 			else {
+				// console.log("it's a video not working for now")
 				window.open(img, '_blank').focus();
 			}
 		}
