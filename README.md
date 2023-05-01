@@ -1,4 +1,4 @@
-# <img src="instextension/icons/instagram_little.png"  width="40"> Instagram Photo Plus
+# <img src="src/icons/instagram_little.png"  width="40"> Instagram Photo Plus
 
 [Add to your browser](https://addons.mozilla.org/es/firefox/addon/instagram-photo-plus/)
 
