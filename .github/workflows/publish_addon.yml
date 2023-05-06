@@ -23,7 +23,7 @@ jobs:
           # omitting it will create a new addon
           uuid: '{785fbcae-38fc-4bd2-9813-50bcad4ac35a}'
           xpi: instextension.xpi # build/my-addon.xpi
-          manifest: instextension/manifest.json
+          manifest: manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
           api-secret: ${{ secrets.FIREFOX_API_SECRET }}
 
