@@ -2,8 +2,9 @@ name: 'Firefox Addon Action'
 
 on:
   # push:
-  #   branches: [ main ]
-  pull_request:
+  #   branches: [ master ]
+  #borrar despues el pr
+  pull_request: 
     branches: [ master ]
 
 jobs:
@@ -20,9 +21,9 @@ jobs:
         with:
           # uuid is only necessary when updating an existing addon,
           # omitting it will create a new addon
-          uuid: '{7b312f5e-9680-436b-acc1-9b09f60e8aaa}'
+          uuid: '{785fbcae-38fc-4bd2-9813-50bcad4ac35a}'
           xpi: instextension.xpi # build/my-addon.xpi
-          manifest: src/manifest.json
+          manifest: manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
           api-secret: ${{ secrets.FIREFOX_API_SECRET }}
 
