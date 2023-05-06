@@ -17,6 +17,9 @@ jobs:
     #     node-version: [10.x, 12.x, 14.x, 15.x]
 
     steps:
+      - name: Main
+          run: |
+            ls
       - uses: trmcnvn/firefox-addon@v1
         with:
           # uuid is only necessary when updating an existing addon,
