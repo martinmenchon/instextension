@@ -2,25 +2,27 @@ name: 'Firefox Addon Action'
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+    branches: [ master ]
 jobs:
+
   deploy:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
-
+    
     steps:
+      - name: Git clone the repository
+        uses: actions/checkout@v3.5.0
+      - name: Create build
+        run: 
+          sh create_build.sh
+      - name: Print folder
+        run: 
+          ls /home/runner/work/instextension/instextension
       - uses: trmcnvn/firefox-addon@v1
         with:
           # uuid is only necessary when updating an existing addon,
           # omitting it will create a new addon
-          uuid: '{7b312f5e-9680-436b-acc1-9b09f60e8aaa}'
-          xpi: instextension.xpi #build/my-addon.xpi
+          uuid: '{785fbcae-38fc-4bd2-9813-50bcad4ac35a}'
+          xpi: instextension.xpi
           manifest: src/manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
           api-secret: ${{ secrets.FIREFOX_API_SECRET }}
