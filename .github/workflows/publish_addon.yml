@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Main
         run: 
-          ls /home/runner/work/instextension/
+          ls /home/runner/work/instextension/instextension
       - uses: trmcnvn/firefox-addon@v1
         with:
           # uuid is only necessary when updating an existing addon,
