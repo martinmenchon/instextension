@@ -21,15 +21,12 @@ jobs:
         uses: actions/checkout@v3.5.0
       - name: Main
         run: 
-          ls .
-      - name: Main
-        run: 
           ls /home/runner/work/instextension/instextension
       - uses: trmcnvn/firefox-addon@v1
         with:
           # uuid is only necessary when updating an existing addon,
           # omitting it will create a new addon
-          uuid: '{785fbcae-38fc-4bd2-9813-50bcad4ac35a}'
+          uuid: '{feb6c5e7-41e5-4da1-a08f-5e3b73055be2}'
           xpi: instextension.xpi # build/my-addon.xpi
           manifest: src/manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
