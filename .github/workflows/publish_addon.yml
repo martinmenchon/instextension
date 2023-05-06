@@ -19,16 +19,19 @@ jobs:
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v3.5.0
+      - name: Create build
+        run: 
+          ./create_build.sh
       - name: Main
         run: 
           ls /home/runner/work/instextension/instextension
-      - uses: trmcnvn/firefox-addon@v1
-        with:
-          # uuid is only necessary when updating an existing addon,
-          # omitting it will create a new addon
-          uuid: '{feb6c5e7-41e5-4da1-a08f-5e3b73055be2}'
-          xpi: instextension.xpi # build/my-addon.xpi
-          manifest: src/manifest.json
-          api-key: ${{ secrets.FIREFOX_API_KEY }}
-          api-secret: ${{ secrets.FIREFOX_API_SECRET }}
+      # - uses: trmcnvn/firefox-addon@v1
+      #   with:
+      #     # uuid is only necessary when updating an existing addon,
+      #     # omitting it will create a new addon
+      #     uuid: '{785fbcae-38fc-4bd2-9813-50bcad4ac35a}'
+      #     xpi: instextension.xpi # build/my-addon.xpi
+      #     manifest: src/manifest.json
+      #     api-key: ${{ secrets.FIREFOX_API_KEY }}
+      #     api-secret: ${{ secrets.FIREFOX_API_SECRET }}
 
